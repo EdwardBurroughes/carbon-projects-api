@@ -3,7 +3,7 @@ from urllib.parse import urljoin
 from fastapi import FastAPI
 from fastapi.requests import Request
 from fastapi.responses import JSONResponse
-from src.api.routers.projects import router as project_router
+from api.routers.projects import router as project_router
 
 
 app = FastAPI()

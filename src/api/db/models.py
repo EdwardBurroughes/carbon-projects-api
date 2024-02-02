@@ -1,7 +1,7 @@
 import sqlite3
 import uuid
 
-from src.api.utils.query_handler import execute_query
+from api.utils.query_handler import execute_query
 
 
 def get_all_projects_query(db: sqlite3.Connection):

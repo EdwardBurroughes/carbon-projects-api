@@ -3,8 +3,8 @@ import uuid
 
 from fastapi import APIRouter, Depends
 
-from src.api.db.engine import get_db
-from src.api.operations.projects import get_all_projects_op, get_project_by_id_op
+from api.db.engine import get_db
+from api.operations.projects import get_all_projects_op, get_project_by_id_op
 
 router = APIRouter()
 
