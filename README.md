@@ -9,15 +9,15 @@ Make sure [pyenv](https://github.com/pyenv/pyenv) is installed before running th
 pyenv virtualenv 3.8.12 <VENV_NAME>
 pyenv activate <VENV_NAME>
 pip install -r requirements-dev.txt
-uvicorn src.main:app --reload
+PYTHONPATH=src uvicorn src.main:app --reload
 ```
 **Running locally with Docker:**
 
 Make sure [Docker](https://docs.docker.com/engine/install/) is installed before running the below commands
 
 ```shell
-docker build -t carbon-projects-api .
-docker run -p "80:80" carbon_projects_api
+docker build -t carbon-projercts-api .
+docker run -p "8000:8000" carbon-projercts-api
 ```
 
 ## Endpoint
@@ -26,14 +26,14 @@ Once the server is running locally the following the `/projects` endpoint is acc
 
 1. Get all carbon projects data
 ```
-curl http://localhost:80/projects
+curl http://localhost:8000/projects
 ```
 
 2. Get carbon projects by ID
 
 Please ensure the id provided is a uuid
 ```shell
-curl http://localhost:80/projects/{id}
+curl http://localhost:8000/projects/{id}
 ```
 
 ## Design Considerations
