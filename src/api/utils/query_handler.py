@@ -23,9 +23,9 @@ def execute_query(
     try:
         return _cursor_execute(conn, query, params)
     except Exception as e:
-        logging.error(f" failed to run query due to the following error: {e}")
+        logging.error(
+            f" failed to run query due to the following error: {e} with query {query}"
+        )
         raise HTTPException(
             status_code=500, detail="Iternal Server error, failed to retrieve data"
         )
-    finally:
-        conn.close()

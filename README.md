@@ -43,7 +43,7 @@ curl http://localhost:8000/projects/{id}
 - Avoided using an ORM i.e. sqlalchemy, as I find them restrictive. In this scenario probably overkill to not use one as the data model is simple.
 
 ## Scalability and Extensions
-Increasing the size of the data, I'd consider the following:
+Increasing the size of the data and switching to a production system, I'd consider the following:
 - Paginating or filtering the results via query params.
 - Introducing caching - to prevent re-querying the table everytime the endpoint is called.
 - Meta-data included in the response i.e. how many results are returned, next and previous page URLs.
