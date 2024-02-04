@@ -22,6 +22,12 @@ async def override_get_db():
 app.dependency_overrides[get_db] = override_get_db
 
 
+def test_api_root():
+    res = client.get("/")
+    data = res.json()
+    assert data["projects"] == f"{res.url}projects"
+
+
 def test_get_projects():
     res = client.get("/projects")
     data = res.json()

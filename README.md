@@ -22,7 +22,8 @@ docker run -p "8000:8000" carbon-projercts-api
 
 ## Endpoint
 
-Once the server is running locally the following the `/projects` endpoint is accessible
+Once the server is running locally the following the `/projects` endpoint is accessible.
+The OpenAPI docs can be viewed on `http://localhost:8000/docs`
 
 1. Get all carbon projects data
 ```
@@ -46,3 +47,5 @@ Increasing the size of the data, I'd consider the following:
 - Paginating or filtering the results via query params.
 - Introducing caching - to prevent re-querying the table everytime the endpoint is called.
 - Meta-data included in the response i.e. how many results are returned, next and previous page URLs.
+- Adding CORs if there is frontend code accessing this API
+- Adding security - i.e. Oauth
